@@ -1,0 +1,11 @@
+  * Invalid File Size: Make sure the file you're sending is either 136, 220 (B/W), or 236 (DPPTHGSS) bytes. 236-byte files are for GenIV, and won't work with B/W just yet. Pokesav and Pokegen are able to convert pkm files from GenIV to the GenV format.
+  * "Socket Error Errno 10013 An attempt was made to access a socket in a way forbidden by it's access permissions": I believe this means that another program is using the necessary ports - I know I've seen Skype and Steam cause this error.
+  * "Communication Error. Please turn off the power": If you're connecting to Black/White, this error will come up if you use the version of IR-GTS for Gen IV. Note that IR-GTS-BW is a separate release for Black/White compatibility.
+  * Error 52100, 52101, 52102: If you have been able to connect to the normal GTS with the same network/settings (save the DNS of course), this means that the DS was unable to make contact with the DNS server that IR-GTS creates. This is most likely an issue with a firewall or AntiVirus software blocking Python, either on the PC or router. Microsoft Security Essentials has caused this error, for one.
+  * Error 13275: The Nintendo Wi-Fi Connection is currently experiencing problems due to a high amount of players, or is temporarily down. Please try again later.
+  * 'No such file or directory "Pokemon/NICKNAME.pkm"': Most frequently, this indicates that IR-GTS is running from a different location than it's saved in. To fix this, try running it from a [Command Prompt](CommandPrompt.md).
+
+
+Several people have been connecting to the actual GTS, despite inputting the DNS settings correctly into the DS. There are several possible causes for this. If (and only if) you are using a USB device to connect your DS to the internet, try setting your computer's DNS to 127.0.0.1 if the adapter is connected to the same computer IR-GTS is running on, or the IP that IR-GTS gives you if not. Otherwise, try deleting all other connections in the DS settings, as it may be accessing a different network than the one IR-GTS is running on.
+
+Per Bond697: "Some ISPs don't allow for the little DNS hijack thing that's used to make the fake GTS work. There's nothing to be done to fix it past trying at a friend's house or public wifi."
